@@ -142,6 +142,13 @@ img {
 .site-nav .link.current {
   color: var(--hover-text-color);
 }
+/* .site-nav .item.link::after {
+  content: "";
+  display: block;
+  background-color: #2196f3;
+  height: 2px;
+  border-radius: 2px;
+} */
 
 /*contacts*/
 .contacts {
@@ -275,7 +282,30 @@ img {
 .work .item + .item {
   margin-left: 30px;
 }
+.img .item {
+  position: relative;
+}
+.img-item-name {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  /* padding-left: 82px; */
+  max-width: 370px;
+  width: 100%;
 
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--hero-title-color);
+  background-color: rgba(47, 48, 58, 0.8);
+}
 .section-title {
   color: var(--second-text-color);
   font-size: 36px;
