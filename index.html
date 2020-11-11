@@ -47,7 +47,7 @@
     <main>
       <section class="hero">
        <h1 class="mardgin-reset hero-title">Эффективные решения <br> для вашего бизнеса</h1>
-       <a class="hero-button" href="">Заказать услугу</a>
+       <button data-modal-open class="hero-button">Заказать услугу</button>
       </section>
       
       <div class="working">
@@ -345,5 +345,12 @@
       </div>
       </section>
     </footer>
+
+    <div class="backdrop is-hidden" data-backdrop>
+      <div class="modal">
+        <button class="modal-button" data-modal-close><img class="close-button" src="./images/Vector.svg" alt="x"></button>
+      </div>
+    </div>
+        <script src="./js/modal.js"></script>
   </body>
 </html>
