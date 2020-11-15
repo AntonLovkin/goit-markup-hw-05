@@ -201,7 +201,6 @@ img {
   fill: var(--main-text-color);
   padding-left: 0px;
   margin-right: 10px;
-  height: 100%;
 }
 
 .mail:hover .icon-mail,
