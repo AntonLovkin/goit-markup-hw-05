@@ -28,6 +28,9 @@ Roboto 400 500 700 900 */
   --background-working-color: #e5e5e5;
   --background-color-footer: #2f303a;
   --bgc-logo: #f5f4fa;
+
+  --transition-duration: 250ms;
+  --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 html {
@@ -39,13 +42,7 @@ html {
 *::after {
   box-sizing: inherit;
 }
-/* *,
-*:hover,
-*,
-*:focus {
-  transition: transform 250ms ease;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-} */
+
 body {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
@@ -137,10 +134,10 @@ img {
 
 .site-nav .link {
   display: block;
-  padding-top: 31px;
-  /* padding-bottom: 31px; */
+  padding-top: 32px;
+
   color: var(--second-text-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-duration) var(--transition-timing-function);
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
@@ -154,9 +151,9 @@ img {
   display: block;
   width: 100%;
   background-color: #2196f3;
-  height: 2px;
+  height: 4px;
   border-radius: 2px;
-  margin-top: 30px;
+  margin-top: 28px;
 }
 
 /*contacts*/
@@ -183,19 +180,19 @@ img {
   display: inline-flex;
   align-items: center;
   color: var(--main-text-color);
-  transition: color 250ms;
+  transition: color var(--transition-duration) var(--transition-timing-function);
 }
 
 .mail:hover,
 .mail:focus {
   color: var(--hover-text-color);
-  transition: color 250ms;
+  transition: color var(--transition-duration);
 }
 
 .phone:hover,
 .phone:focus {
   color: var(--hover-text-color);
-  transition: color 250ms;
+  transition: color var(--transition-duration);
 }
 
 .icon-mail,
@@ -255,6 +252,7 @@ img {
   color: var(--hero-title-color);
   background-color: var(--hover-text-color);
 
+  cursor: pointer;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -262,8 +260,8 @@ img {
   text-align: center;
   letter-spacing: 0.06em;
   text-decoration: none;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-duration),
+    background-color var(--transition-timing-function);
 }
 
 .hero-button:hover,
@@ -457,8 +455,9 @@ img {
   padding: 0;
   border: 0;
   background-color: var(--background-header-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-duration),
+    background-color var(--transition-duration)
+      var(--transition-timing-function);
 }
 .social .item + .item {
   margin-left: 10px;
@@ -514,7 +513,7 @@ img {
   width: 170px;
   height: 90px;
   fill: inherit;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--transition-duration) var(--transition-timing-function);
 }
 .icon-logo {
   display: flex;
@@ -535,9 +534,9 @@ img {
 .link-item-logo:hover .icon-logo,
 .link-item-logo:focus .icon-logo {
   fill: var(--hover-text-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-duration) var(--transition-timing-function),
+    fill var(--transition-duration) var(--transition-timing-function),
+    border-color var(--transition-duration) var(--transition-timing-function);
 }
 /*footer*/
 
@@ -622,8 +621,9 @@ img {
   padding: 0;
   border: 0;
   background-color: rgba(255, 255, 255, 0.1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-duration) var(--transition-timing-function),
+    background-color var(--transition-duration)
+      var(--transition-timing-function);
 }
 .join-list .item + .item {
   margin-left: 10px;
@@ -653,7 +653,8 @@ img {
   background-color: rgba(0, 0, 0, 0.2);
   transform: scale(1);
   transition-duration: 1s;
-  transition-timing-function: 250ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition-timing-function: var(--transition-duration)
+    var(--transition-timing-function);
 }
 
 .backdrop.is-hidden {
@@ -662,7 +663,8 @@ img {
   pointer-events: none;
   transform: scale(2);
   transition-duration: 1s;
-  transition-timing-function: 250ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition-timing-function: var(--transition-duration)
+    var(--transition-timing-function);
 }
 .modal {
   position: absolute;
@@ -673,7 +675,8 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition-timing-function: 250ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition-timing-function: var(--transition-duration)
+    var(--transition-timing-function);
   width: 528px;
   height: 521px;
   text-align: right;
@@ -692,6 +695,9 @@ img {
   background-color: #ffffff;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  margin-top: 8px;
+  margin-right: 8px;
 }
 .close-button {
   display: block;
@@ -727,8 +733,9 @@ img {
   text-align: center;
   letter-spacing: 0.06em;
   text-decoration: none;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-duration) var(--transition-timing-function),
+    background-color var(--transition-duration)
+      var(--transition-timing-function);
 }
 
 .head .item + .item {
@@ -790,7 +797,8 @@ img {
 .portfolio .item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow var(--transition-duration)
+    var(--transition-timing-function);
 }
 
 .example {
@@ -833,8 +841,6 @@ img {
   top: 0;
   left: 0;
   transform: translatey(100%);
-  /* transition: transform 250ms ease;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 
   display: block;
   width: 100%;
@@ -858,6 +864,6 @@ img {
 .portfolio .item:focus .overlay {
   opacity: 1;
   transform: translatey(0);
-  transition: transform 250ms ease;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--transition-duration) ease;
+  transition-timing-function: var(--transition-timing-function);
 }
